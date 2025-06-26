@@ -90,7 +90,6 @@ The project includes extensive EDA and interactive dashboard features to help yo
   - Download filtered data as CSV and save any chart as PNG.
 
 ### Example Screenshots
-> _Replace the image files in the `assets` folder with your own screenshots if desired._
 
 **Dashboard Overview**
 ![Dashboard Overview](assets/dashboard-overview.png)
@@ -104,8 +103,8 @@ The project includes extensive EDA and interactive dashboard features to help yo
 **Sales by Location (Pie Chart)**
 ![Sales by Location](assets/sales-by-location.png)
 
-**Advanced Analytics (Outlier Detection, Drilldown, SQL)**
-![Advanced Analytics](assets/advanced-analytics.png)
+**Advanced Analytics (Correlation Heatmap)**
+![Correlation Heatmap](assets/correlation-heatmap.png)
 
 ---
 
