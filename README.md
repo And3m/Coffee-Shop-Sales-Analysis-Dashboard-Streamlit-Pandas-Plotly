@@ -90,22 +90,22 @@ The project includes extensive EDA and interactive dashboard features to help yo
   - Download filtered data as CSV and save any chart as PNG.
 
 ### Example Screenshots
-> _Replace the image links below with your own screenshots if desired._
+> _Replace the image files in the `assets` folder with your own screenshots if desired._
 
 **Dashboard Overview**
-![Dashboard Overview](https://user-images.githubusercontent.com/placeholder/dashboard-overview.png)
+![Dashboard Overview](assets/dashboard-overview.png)
 
 **Monthly Sales Trend**
-![Monthly Sales](https://user-images.githubusercontent.com/placeholder/monthly-sales.png)
+![Monthly Sales](assets/monthly-sales.png)
 
 **Top Products by Revenue**
-![Top Products](https://user-images.githubusercontent.com/placeholder/top-products.png)
+![Top Products](assets/top-products.png)
 
 **Sales by Location (Pie Chart)**
-![Sales by Location](https://user-images.githubusercontent.com/placeholder/sales-by-location.png)
+![Sales by Location](assets/sales-by-location.png)
 
 **Advanced Analytics (Outlier Detection, Drilldown, SQL)**
-![Advanced Analytics](https://user-images.githubusercontent.com/placeholder/advanced-analytics.png)
+![Advanced Analytics](assets/advanced-analytics.png)
 
 ---
 
