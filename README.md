@@ -92,19 +92,19 @@ The project includes extensive EDA and interactive dashboard features to help yo
 ### Example Screenshots
 
 **Dashboard Overview**
-![Dashboard Overview](assets/dashboard-overview.png)
+![Dashboard Overview](assets/Dashboard%20Overview.png)
 
 **Monthly Sales Trend**
-![Monthly Sales](assets/monthly-sales.png)
+![Monthly Sales](assets/Monthly%20Sales.png)
 
 **Top Products by Revenue**
-![Top Products](assets/top-products.png)
+![Top Products](assets/Top%20Products.png)
 
 **Sales by Location (Pie Chart)**
-![Sales by Location](assets/sales-by-location.png)
+![Sales by Location](assets/Sales%20by%20Location.png)
 
 **Advanced Analytics (Correlation Heatmap)**
-![Correlation Heatmap](assets/correlation-heatmap.png)
+![Correlation Heatmap](assets/Advanced%20Analytics.png)
 
 ---
 
