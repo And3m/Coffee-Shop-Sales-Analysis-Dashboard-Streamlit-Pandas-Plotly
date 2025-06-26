@@ -89,21 +89,26 @@ The project includes extensive EDA and interactive dashboard features to help yo
 - **Download Options:**
   - Download filtered data as CSV and save any chart as PNG.
 
-### Example Screenshots
+### Example Screenshots & Insights
 
-**Dashboard Overview**
+**Dashboard Overview**  
+*The dashboard provides a comprehensive summary of sales KPIs, trends, and interactive filters. Users can quickly assess overall performance and drill down into specific segments for deeper analysis.*
 ![Dashboard Overview](assets/Dashboard%20Overview.png)
 
-**Monthly Sales Trend**
+**Monthly Sales Trend**  
+*This line/bar chart reveals seasonality and growth patterns. For example, sales may peak in certain months, indicating promotional periods or seasonal demand. Identifying these trends helps optimize inventory and marketing strategies.*
 ![Monthly Sales](assets/Monthly%20Sales.png)
 
-**Top Products by Revenue**
+**Top Products by Revenue**  
+*The top 10 products by revenue highlight the best sellers. This insight helps focus on high-performing products and can inform decisions on promotions, stock, and product development.*
 ![Top Products](assets/Top%20Products.png)
 
-**Sales by Location (Pie Chart)**
+**Sales by Location (Pie Chart)**  
+*The pie chart shows the proportion of sales from each store location. This helps identify which locations are driving the most revenue and may reveal opportunities for expansion or targeted marketing.*
 ![Sales by Location](assets/Sales%20by%20Location.png)
 
-**Advanced Analytics (Correlation Heatmap)**
+**Advanced Analytics (Correlation Heatmap)**  
+*The correlation heatmap uncovers relationships between numerical features such as sales, quantity, and unit price. Strong correlations can indicate key drivers of sales or potential multicollinearity in predictive models. For example, a high correlation between quantity and sales is expected, while unexpected relationships may warrant further investigation.*
 ![Correlation Heatmap](assets/Advanced%20Analytics.png)
 
 ---
