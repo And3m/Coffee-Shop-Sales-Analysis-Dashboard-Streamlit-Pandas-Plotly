@@ -110,6 +110,12 @@ with tabs[0]:
     fig1.update_layout(showlegend=False, xaxis_title='Month', yaxis_title='Sales', autosize=True)
     fig1.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
     st.plotly_chart(fig1, use_container_width=True)
+    # Insight for Monthly Sales
+    if not revenue.empty:
+        top_month = revenue.loc[revenue['sales'].idxmax()]
+        st.info(f"**Insight:** {top_month['month']} had the highest sales (${top_month['sales']:,.2f}).")
+    else:
+        st.info("No data available for the selected period.")
 
 # --- Location Sales ---
 with tabs[1]:
@@ -126,6 +132,13 @@ with tabs[1]:
     fig2.update_traces(textinfo='percent+label', textfont_size=12)
     fig2.update_layout(legend_title_text='Location', autosize=True)
     st.plotly_chart(fig2, use_container_width=True)
+    # Insight for Location Sales
+    if not location_revenue.empty:
+        top_loc = location_revenue.loc[location_revenue['sales'].idxmax()]
+        percent = (top_loc['sales'] / location_revenue['sales'].sum()) * 100 if location_revenue['sales'].sum() > 0 else 0
+        st.info(f"**Insight:** {top_loc['location']} generated the most revenue (${top_loc['sales']:,.2f}), accounting for {percent:.1f}% of total sales.")
+    else:
+        st.info("No data available for the selected locations.")
 
 # --- Top Products ---
 with tabs[2]:
@@ -143,6 +156,12 @@ with tabs[2]:
     fig3.update_layout(showlegend=False, xaxis_title='Sales', yaxis_title='Product', autosize=True)
     fig3.update_traces(textfont_size=12, textposition="outside", cliponaxis=False)
     st.plotly_chart(fig3, use_container_width=True)
+    # Insight for Top Products
+    if not top_10_products.empty:
+        top_prod = top_10_products.iloc[0]
+        st.info(f"**Insight:** '{top_prod['product']}' is the best-selling product (${top_prod['sales']:,.2f}).")
+    else:
+        st.info("No product sales data available.")
 
 # --- AOV by Category ---
 with tabs[3]:
@@ -160,6 +179,12 @@ with tabs[3]:
     fig4.update_layout(showlegend=False, xaxis_title='Average Order Value', yaxis_title='Category', autosize=True)
     fig4.update_traces(textfont_size=12, textposition="outside", cliponaxis=False)
     st.plotly_chart(fig4, use_container_width=True)
+    # Insight for AOV by Category
+    if not category_aov.empty:
+        top_cat = category_aov.iloc[0]
+        st.info(f"**Insight:** '{top_cat['category']}' has the highest average order value (${top_cat['sales']:,.2f}).")
+    else:
+        st.info("No category data available.")
 
 # --- Popular Category ---
 with tabs[4]:
@@ -177,6 +202,12 @@ with tabs[4]:
     fig5.update_layout(showlegend=False, xaxis_title='Count', yaxis_title='Category', autosize=True)
     fig5.update_traces(textfont_size=12, textposition="outside", cliponaxis=False)
     st.plotly_chart(fig5, use_container_width=True)
+    # Insight for Popular Category
+    if not category_count.empty:
+        top_cat = category_count.iloc[0]
+        st.info(f"**Insight:** '{top_cat['category']}' is the most frequently purchased category ({top_cat['count']} orders).")
+    else:
+        st.info("No category count data available.")
 
 # --- Peak Hour ---
 with tabs[5]:
@@ -206,6 +237,12 @@ with tabs[5]:
     if peak_hour is not None:
         fig6.add_vline(x=peak_hour, line_dash="dash", line_color="#ffd700", annotation_text=f"Peak: {peak_hour}:00", annotation_position="top right")
     st.plotly_chart(fig6, use_container_width=True)
+    # Insight for Peak Hour
+    if not order_per_hour.empty and peak_hour is not None:
+        peak_orders = order_per_hour.loc[order_per_hour['hour'] == peak_hour, 'count_of_orders'].values[0]
+        st.info(f"**Insight:** Most orders are placed at {peak_hour}:00 ({peak_orders} orders). Consider staffing accordingly.")
+    else:
+        st.info("No hourly order data available.")
 
 # --- Peak Day ---
 with tabs[6]:
@@ -224,6 +261,12 @@ with tabs[6]:
     fig7.update_layout(showlegend=False, xaxis_title='Weekday', yaxis_title='Count of Orders', autosize=True)
     fig7.update_traces(textfont_size=12, textposition="outside", cliponaxis=False)
     st.plotly_chart(fig7, use_container_width=True)
+    # Insight for Peak Day
+    if not weekday_order_counts.empty and weekday_order_counts['count_of_orders'].max() > 0:
+        peak_day = weekday_order_counts.loc[weekday_order_counts['count_of_orders'].idxmax()]
+        st.info(f"**Insight:** {peak_day['weekday']} is the busiest day with {peak_day['count_of_orders']} orders.")
+    else:
+        st.info("No weekday order data available.")
 
 # --- Coffee Types ---
 with tabs[7]:
@@ -242,6 +285,12 @@ with tabs[7]:
     fig8.update_traces(textinfo='percent+label', textfont_size=12)
     fig8.update_layout(legend_title_text='Product', autosize=True)
     st.plotly_chart(fig8, use_container_width=True)
+    # Insight for Coffee Types
+    if not coffee_type_count.empty:
+        top_coffee = coffee_type_count.iloc[0]
+        st.info(f"**Insight:** '{top_coffee['product']}' is the most popular coffee type with {top_coffee['count']} orders.")
+    else:
+        st.info("No coffee type data available.")
 
 # --- Data Table & Download ---
 with tabs[8]:
